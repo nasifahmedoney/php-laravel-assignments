@@ -2,21 +2,31 @@
 // Create a PHP function called generatePassword($length) that generates a random password of the specified length. The password should include lowercase letters, uppercase letters, numbers, and special characters (!@#$%^&*()_+). Write a PHP program to generate a password with a length of 12 characters using this function and print the password.
 
 function generatePassword($length) {
-    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';
+
     $password = '';
-    
-    for ($i = 0; $i < $length; $i++) {
-        $password .= $characters[rand(0, strlen($characters) - 1)];
+
+    $smallLetters = 'abcdefghijklmnopqrstuvwxyz';
+    $capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $numbers = '0123456789';
+    $specialChars = '!@#$%^&*()_+';
+    if($length < 1){
+        return "Length can not be less than 1";
     }
-    
-    return $password;
+    while(strlen($password) != $length){
+        $password .= $smallLetters[rand(0, strlen($smallLetters) - 1)];
+        $password .= $capitalLetters[rand(0, strlen($capitalLetters) - 1)];
+        $password .= $numbers[rand(0, strlen($numbers) - 1)];
+        $password .= $specialChars[rand(0, strlen($specialChars) - 1)];
+        if(strlen($password) > $length){
+            $password = substr($password,0,$length);
+        }
+    }
+
+    return str_shuffle($password);
 }
 
-$passwords = [];
-for ($i = 0; $i < 5; $i++) {
-    $passwords[] = generatePassword(10);
-}
+$randomPassoword = generatePassword(12);
 
-print_r($passwords);
+echo $randomPassoword;
 
 ?>
