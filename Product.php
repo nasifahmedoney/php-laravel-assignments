@@ -11,7 +11,7 @@ class Product {
         $this->price = $price;
     }
 
-    public function getFormattedPrice(){
+    private function getFormattedPrice(){
         $stringPrice = number_format($this->price,2);
         return $stringPrice;
     }
