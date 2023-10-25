@@ -1,0 +1,5 @@
+user1 user1@user1.com e19d5cd5af0378da05f63f891c7467af user
+user2 user2@user2.com e19d5cd5af0378da05f63f891c7467af No[SPACE]Role
+admin1 admin1@admin1.com e19d5cd5af0378da05f63f891c7467af admin
+admin2 admin2@admin2.com e19d5cd5af0378da05f63f891c7467af admin
+new[SPACE]user user3@user3.com e19d5cd5af0378da05f63f891c7467af others
