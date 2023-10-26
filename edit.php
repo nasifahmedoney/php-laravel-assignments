@@ -84,7 +84,7 @@
     <h1>Edit Roles</h1>
     <form action="edit.php" method="POST">
         <label for="existingRole">Existing Role:</label>
-        <input type="text" name="role" value="<?php echo $role[3]; ?>">
+        <input type="text" name="role" value="<?php echo str_replace("[SPACE]"," ",$role[3]); ?>">
         <label for="newRole"></label>
         <!-- <input type="text" name="newRole" required> -->
         <label for="newRole">Choose new role:</label>

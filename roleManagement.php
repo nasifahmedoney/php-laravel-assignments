@@ -51,12 +51,12 @@
             $passwords[] = $arr[2];
             $roles[] = $arr[3];
         }
-        echo "<pre>";
-        print_r($usernames);echo "<br>";
-        print_r($emails);echo "<br>";
-        print_r($passwords);echo "<br>";
-        print_r($roles);echo "<br>";
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r($usernames);echo "<br>";
+        // print_r($emails);echo "<br>";
+        // print_r($passwords);echo "<br>";
+        // print_r($roles);echo "<br>";
+        // echo "</pre>";
     }
 ?>
 

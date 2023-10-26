@@ -79,8 +79,16 @@
         
         <label for="deleteRole">Choose a role:</label>
         <select name="deleteRole" required>
-            <?php for($i = 0;$i<count($roles);$i++){ ?>
-            <option value="<?php echo $i; ?>"><?php echo str_replace("[SPACE]"," ",$roles[$i]); ?></option>
+            <?php for($i = 0;$i<count($roles);$i++){
+                if($roles[$i] == "admin".PHP_EOL){
+                    continue;
+                }
+                else{
+                    ?>
+                    <option value="<?php echo $i; ?>"><?php echo str_replace("[SPACE]"," ",$roles[$i]); ?></option>
+                <?php            
+                }
+                ?>
             <?php } ?>
         </select>
         

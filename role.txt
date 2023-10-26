@@ -1,5 +1,5 @@
 admin
-user
 new[SPACE]role1
 stuff
 others
+user
